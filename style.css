@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: black;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    
+}
+
+nav input {
+    width: 220px;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    margin: 0 12px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+nav a:hover {
+    border-bottom-color: white;
+}
+
+.hero {
+    display: grid;
+    justify-content: center;
+    background-image: url("gray\ studio\ background.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: clamp(48px, 9vw, 110px);
+    font-weight: 900;
+    letter-spacing: 6px;
+}
+
+.image-grid,
+.best-sellers,
+.t-shirts,
+.bottoms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 5%;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: 100%;
+}
+
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.best-sellers img,
+.t-shirts img,
+.bottoms img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: rgb(227, 227, 227);
+    transition: 0.3s ease;
+}
+
+.best-sellers img:hover,
+.t-shirts img:hover,
+.bottoms img:hover {
+    transform: scale(1.08);
+}
+
+.product-name,
+.product-price {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+
+.opening {
+    font-size: clamp(32px, 5vw, 50px);
+}
+
+.view-all {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: white;
+    color: black;
+    border: solid black 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: left;
+    padding: 30px 10px;
+    color: grey;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav input {
+        width: 100%;
+    }
+
+    .image-grid,
+    .best-sellers,
+    .t-shirts,
+    .bottoms {
+        grid-template-columns: 1fr;
+        padding: 15px;
+
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
